@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
 					
 					DatabaseHandler databaseHandler = new DatabaseHandler(getApplicationContext());
 					if (databaseHandler.getRowCount() == 0) {
-						Intent intent = new Intent(getApplicationContext(), Tutorials.class);
+						Intent intent = new Intent(getApplicationContext(), Login.class);
 						intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 						startActivity(intent);
 						finish();
