@@ -1,7 +1,8 @@
 # Android-Tuts-
 
 
-<img src="http://images.dmca.com/Badges/DMCA_logo-std-btn225w.png">
+<img src="http://images.dmca.com/Badges/DMCA_logo-std-btn225w.png"><br>
+<img src="http://logonoid.com/images/open-source-logo.png" width="200" height="200">
 
 A Android Application which will help to understand the andorid app developement process
 
