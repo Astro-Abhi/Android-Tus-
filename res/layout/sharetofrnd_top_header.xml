@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <Button
+        android:id="@+id/send_req"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/com_facebook_button_blue"
+        android:padding="8dp"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/fbshare"
+        android:text="@string/send_req"
+        android:textColor="#fff" />
+
+</RelativeLayout>

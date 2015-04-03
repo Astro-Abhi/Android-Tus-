@@ -1,0 +1,145 @@
+<android.support.v4.widget.DrawerLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrndDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+ 
+    android:background="#ececec"
+>
+
+ <FrameLayout 
+      android:id="@+id/MainLearn"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+       >
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ececec"
+    >
+
+    <RelativeLayout
+        android:id="@+id/MainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/TutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/abc_activitychooserview_choose_application"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ToggleButton
+            android:id="@+id/CodeToShare"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/FrndName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/com_facebook_button_blue_normal"
+            android:padding="10dp"
+            android:textColor="#f9f9f9"
+            android:textOff="XML Code"
+            android:textOn="Android Code"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/CodeToShare"
+            android:layout_marginTop="24dp"
+            android:background="#f9f9f9"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/FrndName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SocialTo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="@string/cts"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id/SocialTo"
+            style="@style/Widget.AppCompat.Base.DropDownItem.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Code"
+            android:layout_below="@+id/facebook"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/com_facebook_button_blue"
+           	android:gravity="center"
+           	android:textDirection="firstStrong"
+            android:popupBackground="#222"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/google"
+            android:visibility="invisible"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/SocialTo"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/common_signin_btn_icon_dark"
+            android:contentDescription="@string/app"
+            android:src="@drawable/common_signin_btn_icon_normal_dark" />
+
+        <ImageButton
+            android:id="@+id/facebook"
+          
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/google"
+            android:layout_below="@+id/TutTitle"
+            android:layout_marginTop="18dp"
+             android:background="@drawable/com_facebook_button_blue"
+            android:contentDescription="@string/app"
+            android:src="@drawable/fbnav" />
+
+        <ImageButton
+            android:id="@+id/Twitter"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/google"
+            android:layout_alignTop="@+id/google"
+            android:background="#4099FF"
+            android:contentDescription="@string/app"
+            android:src="@drawable/twitternav" />
+
+      
+ 
+        
+
+    </RelativeLayout>
+
+</ScrollView>
+
+</FrameLayout>
+
+ <ListView
+			            android:id="@+id/SelectFrnds"
+			            android:layout_width="300dp"
+			            android:layout_height="match_parent"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentTop="true"
+			            android:textFilterEnabled="true"
+			            android:fastScrollEnabled="true"
+			            android:smoothScrollbar="true"
+			            android:background="@drawable/com_facebook_button_grey_pressed"
+			            android:choiceMode="multipleChoice"
+			           android:layout_gravity="left"  >
+			        </ListView>
+
+</android.support.v4.widget.DrawerLayout>

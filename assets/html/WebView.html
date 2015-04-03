@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta name="viewport" content="width=240">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="shCore.js"></script>
+<script type="text/javascript" src="shBrushJava.js"></script>
+<script type="text/javascript" src="shBrushXml.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="shCoreDefault.css">
+<script type="text/javascript">
+SyntaxHighlighter.all();
+$(document).ready(function() {
+	var hash = window.location.hash;
+	var android = $('#android');
+	var xml = $('#xml');
+	var permission = $('#permission');
+	if (hash == '#android') {
+		xml.hide();
+		permission.hide();
+	}else if (hash == '#xml') {
+		android.hide();
+		permission.hide();
+	}else if (hash == '#permission') {
+		xml.hide();
+		android.hide();
+	};
+
+})
+</script>
+</head>
+<body>
+<div id="android">
+<pre class='brush: java;gutter:false;toolbar:false'>
+package com.astro.androidtuts;
+
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.webkit.WebView;
+import android.widget.Button;
+
+
+
+public class WebActivity extends ActionBarActivity {
+
+    WebView preview;
+    Button go;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_web);
+        
+        
+        preview = (WebView)findViewById(R.id.preview);
+    
+        go =(Button)findViewById(R.id.browse);
+        
+        
+        go.setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View arg0) {
+            
+                preview.loadUrl("http://wwww.facebook.com/astromj");
+                preview.getSettings().setJavaScriptEnabled(true);
+            }
+        });
+        
+        
+    }
+
+
+}
+
+</pre>
+</div>
+<div id="xml">
+	<pre class='brush: xml;gutter:false;toolbar:false'>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Web" >
+
+    <WebView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" />
+    <Button 
+        android:id="@+id/browse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#222"
+        android:text="@string/tuts"
+        android:textColor="#f9f9f9"/>
+</RelativeLayout>
+
+</pre>
+</div>
+<div id="permission">
+	<pre class='brush: xml;gutter:false;toolbar:false'>
+<uses-permission android:name="android.permission.INTERNET" />
+    </pre>
+</div>
+</body>
+</html>

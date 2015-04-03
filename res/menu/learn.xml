@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  
+   
+    
+      	<item
+  	     android:id="@+id/quickShare" 
+  	     android:title="@string/qs"
+  	     android:icon="@drawable/quickshare"
+  	     android:showAsAction="always"></item>
+    <item android:id="@+id/shareCode"
+        android:title="@string/share"
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_share">
+    </item>
+  	<item 
+  	    android:id="@+id/getOptions"
+  	    android:icon="@android:drawable/ic_menu_preferences"
+  	    android:title="@string/option"
+  	    android:showAsAction="always"
+/>
+  
+</menu>

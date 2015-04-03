@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <PreferenceCategory android:title="View Settings" 
+        >
+        
+        <SwitchPreference android:switchTextOn="ON"
+            android:title="Animations"
+            android:switchTextOff="OFF"
+            android:defaultValue="true"
+            android:summaryOn="Animation is enabled through out the app"
+            android:summaryOff="Animation is disabled through out the app"
+         android:key="isAnim"/>
+        
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Social Integration">
+        
+        <CheckBoxPreference android:title="Google+"
+            android:defaultValue="false"
+            android:key="isGoogle+"     
+            android:shouldDisableView="true"/>
+        
+        <CheckBoxPreference android:title="Twitter"
+           android:defaultValue="false"
+            android:key="isTwiiter"
+           android:shouldDisableView="true" />
+        
+    </PreferenceCategory>
+    
+    <PreferenceCategory 
+        android:title="Notification">
+        
+        <CheckBoxPreference 
+            android:title="Facebook POST Notification"
+            android:summary="Notify when a post is posted to my facebook wall from this app"
+            android:key="isNotifi"
+            android:defaultValue="true"
+            android:shouldDisableView="true"/>
+        
+        <CheckBoxPreference 
+            android:title="Twiiter POST Notification"
+            android:summary="Notify when a post is posted to my twitted  from this app"
+            android:key="isNotifiTwit"
+             android:defaultValue="true"
+            android:shouldDisableView="true"/>
+        
+        <CheckBoxPreference 
+            android:title="Notification Tone"
+            android:summary="Play Ringtone on notification"
+            android:key="isNotifiTone"
+             android:defaultValue="true"
+            android:shouldDisableView="true"
+            />
+        
+
+        
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Posting">
+        <ListPreference android:dialogTitle="Choose Network"
+            android:dialogIcon="@drawable/ic_launcher"
+            android:positiveButtonText="Finish"
+            android:negativeButtonText="Cancel"
+      		android:defaultValue="Any"
+      		android:summary="Any"
+            android:entries="@array/network"
+            android:entryValues="@array/network"
+            android:title="Post On"
+            android:key="posting"
+            />
+ 
+     <EditTextPreference 
+         android:dialogTitle="Enter Your Text"
+         android:dialogMessage="This Text will be appended to every post"
+         android:dialogIcon="@drawable/ic_launcher"
+         android:key="extraText"
+         android:title="Append Text"
+         android:summary="This Text will be appended to every post"
+         android:defaultValue="null"/>
+        
+    </PreferenceCategory>
+    
+    <PreferenceCategory 
+        android:title="Offline Access">
+        
+        <SwitchPreference 
+             android:title="Facebook Friends"
+           android:summary="Store Friends Info offline for better Access"
+           android:key="isoffline"
+           android:defaultValue="true"/>
+          
+        <Preference 
+            android:title="Note"
+            android:summary="Private Info of Friends Will not be saved"/>
+        
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Version Control">
+        
+        <CheckBoxPreference
+            android:title="Auto-Update"
+            android:summary="Notify When A new update is availble"
+            android:key="isUpdate"
+            android:defaultValue="true"/>
+        
+        <Preference android:title="Version"
+        android:summary="version 2.0"/>
+    </PreferenceCategory>
+    
+</PreferenceScreen>

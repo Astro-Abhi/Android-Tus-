@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/passForgot" 
+         android:title="@string/forgot"
+></item>
+    <item android:id="@+id/registerNew"
+         android:title="@string/Register"
+>
+        
+    </item>
+    <item android:id="@+id/tuts" android:title="@string/tuts">   
+    </item>
+
+
+</menu>

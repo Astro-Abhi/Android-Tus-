@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="@drawable/blur" >
+
+    <TextView
+        android:id="@+id/showSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ShimmerText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:text="@string/made"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#f9f9f9" />
+
+    <ImageView
+          android:contentDescription="@string/app_name"
+        android:id="@+id/like_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/showSelected"
+        android:layout_toRightOf="@+id/showSelected"
+        android:src="@drawable/heart"
+        android:layout_marginTop="-10dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/showSelected"
+        android:layout_alignBottom="@+id/showSelected"
+        android:layout_alignRight="@+id/ShimmerText"
+        android:text="@string/by"
+        android:textColor="#f9f9f9"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/LogoApp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_launcher_web" />
+
+    <TextView
+        android:id="@+id/ShimmerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignBottom="@+id/LogoApp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app"
+        android:textColor="#f9f9f9"
+        android:textSize="30sp" />
+
+</RelativeLayout>

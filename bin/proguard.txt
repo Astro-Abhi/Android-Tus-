@@ -1,0 +1,154 @@
+# view res/layout/activity_share_to_fb.xml #generated:1
+# view res/layout/activity_tutorial.xml #generated:1
+-keep class android.support.v4.widget.DrawerLayout { <init>(...); }
+
+# view res/layout/abc_action_menu_item_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abc_action_menu_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ActionMenuView { <init>(...); }
+
+# view res/layout/abc_expanded_menu_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ExpandedMenuView { <init>(...); }
+
+# view res/layout/abc_list_menu_item_layout.xml #generated:17
+# view res/layout/abc_popup_menu_item_layout.xml #generated:17
+-keep class android.support.v7.internal.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:19
+# view res/layout/abc_action_bar_decor_include.xml #generated:47
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:29
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:52
+-keep class android.support.v7.internal.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:31
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:40
+# view res/layout/abc_action_mode_bar.xml #generated:19
+-keep class android.support.v7.internal.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:17
+-keep class android.support.v7.internal.widget.ActionBarOverlayLayout { <init>(...); }
+
+# view res/layout/abc_action_bar_decor_include.xml #generated:25
+# view res/layout/abc_action_bar_decor_overlay.xml #generated:35
+-keep class android.support.v7.internal.widget.ActionBarView { <init>(...); }
+
+# view res/layout/abc_action_bar_home.xml #generated:17
+-keep class android.support.v7.internal.widget.ActionBarView$HomeView { <init>(...); }
+
+# view res/layout/abc_action_bar_tabbar.xml #generated:17
+# view res/layout/abc_activity_chooser_view.xml #generated:19
+-keep class android.support.v7.internal.widget.LinearLayoutICS { <init>(...); }
+
+# view v11\res/layout-v11/abc_action_bar_decor.xml #generated:17
+-keep class android.support.v7.internal.widget.NativeActionModeAwareLayout { <init>(...); }
+
+# view res/layout/abc_action_bar_tab.xml #generated:17
+-keep class android.support.v7.internal.widget.ScrollingTabContainerView$TabView { <init>(...); }
+
+# view res/layout/abc_search_view.xml #generated:85
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# view AndroidManifest.xml #generated:164
+-keep class com.astro.androidtuts.About { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class com.astro.androidtuts.Buttons { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class com.astro.androidtuts.Checkbox { <init>(...); }
+
+# view AndroidManifest.xml #generated:90
+-keep class com.astro.androidtuts.EditText { <init>(...); }
+
+# view AndroidManifest.xml #generated:188
+-keep class com.astro.androidtuts.Google { <init>(...); }
+
+# view AndroidManifest.xml #generated:82
+-keep class com.astro.androidtuts.ImageView { <init>(...); }
+
+# view AndroidManifest.xml #generated:86
+-keep class com.astro.androidtuts.Imagebutton { <init>(...); }
+
+# view AndroidManifest.xml #generated:118
+-keep class com.astro.androidtuts.ItemDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:114
+-keep class com.astro.androidtuts.ItemListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:62
+-keep class com.astro.androidtuts.Learn { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.astro.androidtuts.Login { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.astro.androidtuts.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:70
+-keep class com.astro.androidtuts.MainsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:151
+-keep class com.astro.androidtuts.Notification { <init>(...); }
+
+# view AndroidManifest.xml #generated:102
+-keep class com.astro.androidtuts.RadioButton_ex { <init>(...); }
+
+# view AndroidManifest.xml #generated:130
+-keep class com.astro.androidtuts.Rating { <init>(...); }
+
+# view AndroidManifest.xml #generated:138
+-keep class com.astro.androidtuts.Settings { <init>(...); }
+
+# view AndroidManifest.xml #generated:176
+-keep class com.astro.androidtuts.ShareToFrnd { <init>(...); }
+
+# view AndroidManifest.xml #generated:169
+-keep class com.astro.androidtuts.ShareToSocial { <init>(...); }
+
+# view AndroidManifest.xml #generated:126
+-keep class com.astro.androidtuts.Spinner_act { <init>(...); }
+
+# view AndroidManifest.xml #generated:195
+-keep class com.astro.androidtuts.Test { <init>(...); }
+
+# view AndroidManifest.xml #generated:94
+-keep class com.astro.androidtuts.Toast_Ex { <init>(...); }
+
+# view AndroidManifest.xml #generated:106
+-keep class com.astro.androidtuts.Toggle { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.astro.androidtuts.Tutorials { <init>(...); }
+
+# view AndroidManifest.xml #generated:182
+-keep class com.astro.androidtuts.Twiiter { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.astro.androidtuts.Video { <init>(...); }
+
+# view AndroidManifest.xml #generated:134
+-keep class com.astro.androidtuts.Web { <init>(...); }
+
+# view AndroidManifest.xml #generated:155
+-keep class com.facebook.LoginActivity { <init>(...); }
+
+# view res/layout/activity_login.xml #generated:27
+# view res/layout/com_facebook_usersettingsfragment.xml #generated:48
+# view res/layout/fb_info.xml #generated:27
+-keep class com.facebook.widget.LoginButton { <init>(...); }
+
+# view res/layout/fb_frnds_layout.xml #generated:9
+# view res/layout/fb_info.xml #generated:20
+# view res/layout/nav_frnd_selector.xml #generated:7
+-keep class com.facebook.widget.ProfilePictureView { <init>(...); }
+
+# view res/layout/default_header.xml #generated:37
+-keep class fr.castorflex.android.smoothprogressbar.SmoothProgressBar { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class outputs.Buttons { <init>(...); }
+
+# view res/layout/activity_learn.xml #generated:47
+-keep class uk.co.senab.actionbarpulltorefresh.extras.actionbarcompat.PullToRefreshLayout { <init>(...); }
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="#222"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/FB_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+		android:layout_marginTop="20dp"
+        android:text="@string/app_id"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#f9f9f9" />
+
+    <com.facebook.widget.ProfilePictureView
+        android:id="@+id/PicPro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:is_cropped="true"
+         />
+
+    <com.facebook.widget.LoginButton
+        android:id="@+id/FB_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="110dp"
+        android:textColor="#f9f9f9"
+ />
+    
+</FrameLayout>

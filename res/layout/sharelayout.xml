@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#f9f9f9" >
+
+    <FrameLayout
+        android:id="@+id/AndroidCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2180e5" 
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/TutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/and"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#f9f9f9" />
+
+        <ImageView
+            android:id="@+id/FBBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/CopyContent"
+            android:src="@drawable/codeicon" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/XMLCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2180e5" 
+        android:layout_gravity="center"
+        android:padding="5dp"
+         android:focusable="true"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/showSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/xml"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#f9f9f9" />
+
+        <ImageView
+            android:id="@+id/GoogleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/CopyContent"
+            android:src="@drawable/codeicon" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/ShareToWall"
+        android:title="@string/stw"
+        android:showAsAction="always|withText"
+       
+        />
+    <item android:id="@+id/ShareToFrnd"
+        android:title="@string/stf"
+         android:showAsAction="always|withText"/>
+</menu>

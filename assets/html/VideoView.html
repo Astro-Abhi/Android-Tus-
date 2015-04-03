@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta name="viewport" content="width=240">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="shCore.js"></script>
+<script type="text/javascript" src="shBrushJava.js"></script>
+<script type="text/javascript" src="shBrushXml.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="shCoreDefault.css">
+<script type="text/javascript">
+SyntaxHighlighter.all();
+$(document).ready(function() {
+	var hash = window.location.hash;
+	var android = $('#android');
+	var xml = $('#xml');
+	var permission = $('#permission');
+	if (hash == '#android') {
+		xml.hide();
+		permission.hide();
+	}else if (hash == '#xml') {
+		android.hide();
+		permission.hide();
+	}else if (hash == '#permission') {
+		xml.hide();
+		android.hide();
+	};
+
+})
+</script>
+</head>
+<body>
+<div id="android">
+<pre class='brush: java;gutter:false;toolbar:false'>
+package com.astro.androidtuts;
+
+
+
+import android.net.Uri;
+import android.os.Bundle;
+import android.app.Activity;
+
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
+import android.widget.MediaController;
+import android.widget.VideoView;
+
+public class Video extends Activity implements OnClickListener {
+
+	VideoView videoView;
+	ImageButton play,pause;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_video);
+		
+		videoView = (VideoView)findViewById(R.id.videoView1);
+		play = (ImageButton)findViewById(R.id.imageButton1);
+		pause = (ImageButton)findViewById(R.id.imageButton2);
+		
+		play.setOnClickListener(this);
+		pause.setOnClickListener(this);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.video, menu);
+		return true;
+	}
+
+	@Override
+	public void onClick(View view) {
+		switch (view.getId()) {
+		case R.id.imageButton1:
+			
+				String path = "android.resources://com.astro.androidtuts/raw/video";
+				videoView.setVideoURI(Uri.parse(path));
+				videoView.setMediaController(new MediaController(getApplicationContext()));
+				videoView.requestFocus();
+				videoView.start();
+			break;
+		case R.id.imageButton2:
+			if (videoView.isPlaying()) {
+				videoView.pause();
+			}
+		default:
+			break;
+		}
+		
+	}
+
+}
+
+</pre>
+</div>
+<div id="xml">
+	<pre class='brush: xml;gutter:false;toolbar:false'>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Video"
+    android:background="#ececec" >
+
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:contentDescription="@string/app_name"
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/videoView1"
+        android:layout_alignLeft="@+id/videoView1"
+        android:layout_marginLeft="90dp"
+        android:src="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:contentDescription="@string/app_name"
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageButton1"
+        android:layout_toRightOf="@+id/imageButton1"
+        android:src="@android:drawable/ic_media_pause" />
+
+</RelativeLayout>
+
+</pre>
+</div>
+<div id="permission">
+	<p style="font-family:tahoma;">No Special Permission Required</p>
+</div>
+</body>
+</html>

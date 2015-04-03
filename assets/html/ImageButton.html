@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta name="viewport" content="width=240">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="shCore.js"></script>
+<script type="text/javascript" src="shBrushJava.js"></script>
+<script type="text/javascript" src="shBrushXml.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="shCoreDefault.css">
+<script type="text/javascript">
+SyntaxHighlighter.all();
+$(document).ready(function() {
+	var hash = window.location.hash;
+	var android = $('#android');
+	var xml = $('#xml');
+	var permission = $('#permission');
+	if (hash == '#android') {
+		xml.hide();
+		permission.hide();
+	}else if (hash == '#xml') {
+		android.hide();
+		permission.hide();
+	}else if (hash == '#permission') {
+		xml.hide();
+		android.hide();
+	};
+
+})
+</script>
+</head>
+<body>
+<div id="android">
+<pre class='brush: java;gutter:false;toolbar:false'>
+package com.astro.androidtuts;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.graphics.Color;
+import android.view.Menu;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+
+public class Imagebutton extends Activity {
+
+	ImageButton button;
+	RelativeLayout layout;
+	int set = 0;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_imagebutton);
+		
+		button =(ImageButton)findViewById(R.id.imageButton1);
+		layout =(RelativeLayout)findViewById(R.id.RelativeLayout1);
+		
+		button.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				
+				if (set == 0) {
+					layout.setBackgroundColor(Color.WHITE);
+					set = 1;
+				}else {
+					String color = "#ececec";
+					layout.setBackgroundColor(Color.parseColor(color));
+					set = 0;
+				}
+				
+			}
+		});
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.imagebutton, menu);
+		return true;
+	}
+
+}
+
+</pre>
+</div>
+<div id="xml">
+	<pre class='brush: xml;gutter:false;toolbar:false'>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Imagebutton"
+    android:background="#ececec" >
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/android_logo" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButton1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:text="@string/clickimage"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
+
+</pre>
+</div>
+<div id="permission">
+	<p style="font-family:tahoma;">No Special Permission Required</p>
+</div>
+</body>
+</html>

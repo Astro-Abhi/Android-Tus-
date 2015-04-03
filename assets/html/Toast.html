@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta name="viewport" content="width=240">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="shCore.js"></script>
+<script type="text/javascript" src="shBrushJava.js"></script>
+<script type="text/javascript" src="shBrushXml.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="shCoreDefault.css">
+<script type="text/javascript">
+SyntaxHighlighter.all();
+$(document).ready(function() {
+	var hash = window.location.hash;
+	var android = $('#android');
+	var xml = $('#xml');
+	var permission = $('#permission');
+	if (hash == '#android') {
+		xml.hide();
+		permission.hide();
+	}else if (hash == '#xml') {
+		android.hide();
+		permission.hide();
+	}else if (hash == '#permission') {
+		xml.hide();
+		android.hide();
+	};
+
+})
+</script>
+</head>
+<body>
+<div id="android">
+<pre class='brush: java;gutter:false;toolbar:false'>
+package com.astro.androidtuts;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class Toast_Ex extends Activity {
+
+	EditText editText;
+	Button button;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_toast__ex);
+		
+		editText = (EditText)findViewById(R.id.editText1);
+		button = (Button)findViewById(R.id.button1);
+		
+		button.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+			
+				String input = editText.getText().toString();
+				//Making Toast
+				Toast.makeText(getApplicationContext(), input, Toast.LENGTH_LONG).show();
+				
+			}
+		});
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.toast__ex, menu);
+		return true;
+	}
+
+}
+
+
+</pre>
+</div>
+<div id="xml">
+	<pre class='brush: xml;gutter:false;toolbar:false'>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Toast_Ex"
+    android:background="#ececec" >
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/android_logo" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="54dp"
+        android:background="#f9f9f9"
+        android:ems="10"
+        android:hint="@string/enter"
+        android:padding="10dp"
+        android:textColor="#222" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editText1"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="@string/show"
+        android:layout_marginTop="-4dp" />
+
+</RelativeLayout>
+
+</pre>
+</div>
+<div id="permission">
+	<p style="font-family:tahoma;">No Special Permission Required</p>
+</div>
+</body>
+</html>
